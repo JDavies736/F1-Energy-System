@@ -1,0 +1,25 @@
+%% F1 vehicle parameters
+
+% Car parameters
+mass = 768;
+wheel_rad = 0.2286;
+Cd = 1;
+Fr_A = 1.2;
+
+% Environment
+rho = 1.225;
+g = 9.81;
+
+% Battery
+battery_capacity = 1.1;
+battery_volt = 850;
+max_SOC = 0.7;
+min_soc = 0.3;
+
+% Motor
+max_motor_power = 1000;
+motor_efficiency = 0.5;
+
+% Regenerative Braking
+regen_efficiency = 0.9;
+max_regen_power = 350;
