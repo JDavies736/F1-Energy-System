@@ -36,12 +36,8 @@ P_required = F_total .* velocity;
 
 % Battery
 P_battery = zeros(size(P_required));
-% Whilst accelerating/cruising
 driving = P_required >= 0;
 P_battery(driving) = P_required(driving) ./ motor_efficiency;
-% Regenerative braking
-braking = P_required < 0;
-P_battery(braking) = P_required(braking) ./ regen_efficiency;
 
 
 % Plot
@@ -53,7 +49,7 @@ title('Speed Profile of Accelerating and Decelerating')
 grid on;
 
 figure;
-plot(time, P_battery / 1000, 'g-');
+plot(time, P_battery, 'g-');
 xlabel('Time (s)')
 ylabel('Battery Power (kW)')
 title('Demand of Battery Power')

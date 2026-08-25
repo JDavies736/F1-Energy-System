@@ -5,6 +5,7 @@ mass = 768;
 wheel_rad = 0.2286;
 Cd = 1;
 Fr_A = 1.2;
+Crr = 0.012;
 
 % Environment
 rho = 1.225;
@@ -18,7 +19,7 @@ min_soc = 0.3;
 
 % Motor
 max_motor_power = 1000;
-motor_efficiency = 0.5;
+motor_efficiency = 0.7;
 
 % Regenerative Braking
 regen_efficiency = 0.9;
